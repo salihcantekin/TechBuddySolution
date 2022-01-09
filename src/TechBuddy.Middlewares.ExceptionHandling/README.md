@@ -41,7 +41,7 @@ The parameters below will override their original value when they are set.
 * `ContentType`
 * `DefaultMessage`
 
-If you wanted to use this middleware for only specific extepcion types, then you can use `ExceptionTypeList` to add your exception types. If the exception is not one of the given exceptions, middleware will not catch and manage the exception.
+If you want to use this middleware for only specific exception types, then you can use `ExceptionTypeList` to add your exception types. If the exception is not one of the given exceptions, middleware will not catch and manage the exception.
 
 When `ExceptionHandlerAction` is set, this action will be invoked when any exception has occured.
 
