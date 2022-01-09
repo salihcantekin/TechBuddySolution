@@ -5,6 +5,11 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>disable</Nullable>
 		<LangVersion>10</LangVersion>
+		<Authors>Salih Cantekin</Authors>
+		<Company>Tech Buddy - Salih Cantekin</Company>
+		<PackageProjectUrl>https://github.com/salihcantekin/TechBuddySolution</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/salihcantekin/TechBuddySolution</RepositoryUrl>
+		<PackageTags>ExceptionHandling;ExceptionHandlingMiddleware</PackageTags>
 	</PropertyGroup>
 
 	<ItemGroup>

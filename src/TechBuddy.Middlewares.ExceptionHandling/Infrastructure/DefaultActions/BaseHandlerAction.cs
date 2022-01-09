@@ -28,7 +28,7 @@
             var result = JsonSerializer.Serialize(model);
 
             context.Response.ContentType = httpContentType;
-            
+
             context.Response.StatusCode = (int)statusCode;
             return context.Response.WriteAsync(result);
         }
