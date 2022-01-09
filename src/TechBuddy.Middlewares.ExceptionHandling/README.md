@@ -1,5 +1,7 @@
 # ExceptionHandling Middleware
 
+[![NuGet](https://img.shields.io/nuget/v/TechBuddy.Middlewares.ExceptionHandling)](https://www.nuget.org/packages/TechBuddy.Middlewares.ExceptionHandling/)
+
 ## Description
 
 This project represents a build-in ExceptionHandling Middleware as an extension method for `IApplicationBuilder`
