@@ -1,5 +1,8 @@
 # TechBuddySolution
 
+[![NuGet](https://img.shields.io/nuget/v/TechBuddy.Middlewares.ExceptionHandling)](https://www.nuget.org/packages/TechBuddy.Middlewares.ExceptionHandling/)
+
+
 ## Description
 
 This solution is made for containing useful infrastructure content mostly for web api projects such as Middlewares, ActionFilters etc.
