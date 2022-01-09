@@ -9,16 +9,18 @@
 		<Company>Tech Buddy - Salih Cantekin</Company>
 		<PackageProjectUrl>https://github.com/salihcantekin/TechBuddySolution</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/salihcantekin/TechBuddySolution</RepositoryUrl>
+		<PackageVersion>1.0.1</PackageVersion>
 		<PackageTags>ExceptionHandling;ExceptionHandlingMiddleware</PackageTags>
 		<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+		<Description>Build-in exception handling middleware by TechBuddy (Salih Cantekin)</Description>
 
 	</PropertyGroup>
 
 	<ItemGroup>
-		<None Include="licenses\LICENSE.txt" Pack="true" PackagePath=""/>
-		<None Include="README.md" Pack="true" PackagePath="\"/>
+		<None Include="licenses\LICENSE.txt" Pack="true" PackagePath="" />
+		<None Include="README.md" Pack="true" PackagePath="\" />
 		<PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
 	</ItemGroup>
 

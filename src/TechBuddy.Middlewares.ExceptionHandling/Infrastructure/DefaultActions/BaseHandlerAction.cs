@@ -2,7 +2,7 @@
 {
     internal abstract class BaseHandlerAction
     {
-        internal static Task Handle(HttpContext context, Exception ex,
+        protected static Task Handle(HttpContext context, Exception ex,
             IResponseModelCreator responseModelCreator,
             HttpStatusCode statusCode,
             string errorMessage,
