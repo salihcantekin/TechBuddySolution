@@ -20,6 +20,8 @@ This solution is made for containing useful infrastructure content mostly for we
 This is the main repository for TechBuddySolutions, but there's more:
 * [ExceptionHandling](https://github.com/salihcantekin/TechBuddySolution/tree/master/src/TechBuddy.Middlewares.ExceptionHandling)
 * [ExceptionHandling UnitTest](https://github.com/salihcantekin/TechBuddySolution/tree/master/test/ExceptionHandling.UnitTest)
+* [RequestResponse Logging](https://github.com/salihcantekin/TechBuddySolution/tree/master/src/TechBuddy.Middlewares.RequestResponse)
+* [RequestResponse Logging UnitTest](https://github.com/salihcantekin/TechBuddySolution/tree/master/test/RequestResponse.UnitTest)
 
 
 ## Authors
