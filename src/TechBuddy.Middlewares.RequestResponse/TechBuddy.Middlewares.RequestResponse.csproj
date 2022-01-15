@@ -1,16 +1,37 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
-	  <LangVersion>10</LangVersion>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net5.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>disable</Nullable>
+		<LangVersion>10</LangVersion>
+		<Authors>Salih Cantekin</Authors>
+		<Company>Tech Buddy - Salih Cantekin</Company>
+		<PackageProjectUrl>https://github.com/salihcantekin/TechBuddySolution</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/salihcantekin/TechBuddySolution</RepositoryUrl>
+		<PackageVersion>1.0.0</PackageVersion>
+		<PackageTags>RequestResponse;RequestResponseLogging;RequestResponseMiddleware;RequestResponseLoggingMiddleware</PackageTags>
+		<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+		<Description>Build-in request-response handling middleware by TechBuddy (Salih Cantekin)</Description>
+		<PackageIcon>logo.png</PackageIcon>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.2.2" />
-    <PackageReference Include="Microsoft.AspNetCore.Http.Extensions" Version="2.2.0" />
-    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="6.0.0" />
-    <PackageReference Include="Microsoft.IO.RecyclableMemoryStream" Version="2.2.0" />
-	  <PackageReference Include="NUnit3TestAdapter" Version="4.2.0" />
-  </ItemGroup>
+	<ItemGroup>
+		<None Include="..\..\..\..\..\..\Youtube\Images\logo.png" Link="logo.png">
+			<PackagePath>\</PackagePath>
+			<Pack>True</Pack>
+		</None>
+		<None Include="licenses\LICENSE.txt" Pack="true" PackagePath="" />
+		<None Include="README.md" Pack="true" PackagePath="\" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.Http" Version="2.2.2" />
+		<PackageReference Include="Microsoft.AspNetCore.Http.Extensions" Version="2.2.0" />
+		<PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="6.0.0" />
+		<PackageReference Include="Microsoft.IO.RecyclableMemoryStream" Version="2.2.0" />
+	</ItemGroup>
 
 </Project>
