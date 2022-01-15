@@ -1,5 +1,7 @@
 # RequestResponse Middleware
 
+[![NuGet](https://img.shields.io/nuget/v/TechBuddy.Middlewares.RequestResponse)](https://www.nuget.org/packages/TechBuddy.Middlewares.RequestResponse/)
+
 
 ## Description
 
