@@ -1,6 +1,9 @@
 # TechBuddySolution
 
 [![NuGet](https://img.shields.io/nuget/v/TechBuddy.Middlewares.ExceptionHandling)](https://www.nuget.org/packages/TechBuddy.Middlewares.ExceptionHandling/)
+[![](https://img.shields.io/github/stars/salihcantekin/Techbuddysolution?style=social)]()
+[![](https://img.shields.io/github/forks/salihcantekin/Techbuddysolution?style=social)]()
+
 
 
 ## Description
