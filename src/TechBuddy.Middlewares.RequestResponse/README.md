@@ -42,7 +42,7 @@ app.AddTBRequestResponseMiddleware(opt =>
 });
 ```
 
-By using `UseHandler` method, you can easily access the properties in the context. This method is fired just before request is completed by the middleware which collects all the information to server you. There are several properties you might need in this context. If you would just want to log all the data, you can simply use `UseLogger` method. 
+By using `UseHandler` method, you can easily access the properties in the context. This method is fired just before the request is completed by the middleware which collects all the information to serve you. There are several properties you might need in this context. You may use this data to do whatever you want to. If you just want to log all the data, you can simply use `UseLogger` method. 
 By using this way, you basically tell the middleware that it can use the logging features that your system already have.
 
 Let's say you use console logging. That would mean, your system will send all the produced logs to the console. In this case, when you use `UseLogger` and give it a default log provider of your system, the request and response logs would directly goes to your console. You are also able to add more than one built-in place to write the logs to such as `Debug`, `EventLog` or even custom logger libraries such as `Serilog`.
@@ -71,7 +71,7 @@ opt.UseLogger(app.ApplicationServices.GetRequiredService<ILoggerFactory>(), opt 
 });
 ```
 
-Once you choose to use your loggerfactory to write the logs to, you might want to customize the log output. If you use logging system that supports Context Feature as Serilog does, you want to set `UseSeparateContext` property to true. This will send the logs trought the LoggerFactory by using Context. [See an example for Serilog](https://benfoster.io/blog/serilog-best-practices/#log-context)
+Once you choose to use your loggerfactory to write the logs to, you might want to customize the log output. If you use a logging system that supports Context Feature as Serilog does, you want to set `UseSeparateContext` property to true. This will send the logs through the LoggerFactory by using Context. [See an example for Serilog](https://benfoster.io/blog/serilog-best-practices/#log-context)
 
 On the other hand, you can also customize the output properties by adding what information you want to see on the output. To do that, you can add the properties you want to the `LoggingFields` list. `LogingLevel` property is used to send the logs to the providers by using this level. Let's say you customized your Console Logging by only showing warning and error message by setting the LogLevel to 'Warning'. In this case, your request and response logs wouldn't appear on the console unless you set the `LoggingLevel` to LogLevel.Warning. So you are able to customize the log level that middleware uses while sending the logs to the providers. The `LoggerCategoryName` is used to create the logger by giving it a name. 
 
