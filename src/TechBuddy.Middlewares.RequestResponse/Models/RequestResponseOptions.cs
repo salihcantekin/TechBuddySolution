@@ -14,7 +14,7 @@
         internal bool HandlerUsing => ReqResHandler is not null;
 
 
-        public void UseLogWriter(ILogWriter logWriter)
+        internal void UseLogWriter(ILogWriter logWriter)
         {
             LogWriter = logWriter;
         }

@@ -1,10 +1,13 @@
-﻿using System.Text.Json.Serialization;
+﻿using System.Text.Json;
+using System.Text.Json.Serialization;
 
 namespace TechBuddy.Middlewares.RequestResponse
 {
     public class RequestResponseContext
     {
+        [JsonIgnore]
         internal readonly HttpContext Context;
+
         internal RequestResponseContext(HttpContext context)
         {
             Context = context;
@@ -31,10 +34,10 @@ namespace TechBuddy.Middlewares.RequestResponse
         private string url;
         public string Url => url ??= BuildUrl().ToString();
 
-        public Uri BuildUrl()
+        internal Uri BuildUrl()
         {
             var url = Context.Request.GetDisplayUrl();
-            
+
             return new Uri(url, UriKind.RelativeOrAbsolute);
         }
     }

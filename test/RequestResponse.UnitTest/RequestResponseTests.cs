@@ -17,7 +17,6 @@ using System.Net.Http.Json;
 using System.Text.Json;
 using System.Threading.Tasks;
 using TechBuddy.Middlewares.RequestResponse;
-using TechBuddy.Middlewares.RequestResponse.Models;
 
 namespace RequestResponse.UnitTest
 {
@@ -101,7 +100,7 @@ namespace RequestResponse.UnitTest
                         {
                             opt.UseHandler(async context =>
                             {
-                                var uri = context.BuildUrl();
+                                var uri = new Uri(context.Url);
 
                                 uri.Host.Should().Be("localhost");
                                 uri.Port.Should().Be(80);

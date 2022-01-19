@@ -14,6 +14,8 @@
 
         public string Create(RequestResponseContext requestResponseContext)
         {
+            valueList.Clear();
+
             var sb = new StringBuilder();
 
             foreach (var logField in loggingOptions.LoggingFields)

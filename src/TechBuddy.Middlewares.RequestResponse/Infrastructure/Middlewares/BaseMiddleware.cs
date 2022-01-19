@@ -1,4 +1,7 @@
-﻿namespace TechBuddy.Middlewares.RequestResponse.Infrastructure.Middlewares
+﻿using System.Text.Json;
+using System.Web;
+
+namespace TechBuddy.Middlewares.RequestResponse.Infrastructure.Middlewares
 {
     public abstract class BaseMiddleware
     {
@@ -25,7 +28,7 @@
             sw.Stop();
 
             httpContext.Response.Body.Seek(0, SeekOrigin.Begin);
-            string responseText = await new StreamReader(httpContext.Response.Body, Encoding.UTF8).ReadToEndAsync();
+            string responseText = await new StreamReader(httpContext.Response.Body).ReadToEndAsync();
             httpContext.Response.Body.Seek(0, SeekOrigin.Begin);
 
             await responseBody.CopyToAsync(originalBodyStream);
@@ -36,11 +39,12 @@
                 ResponseBody = responseText,
                 ResponseCreationTime = TimeSpan.FromTicks(sw.ElapsedTicks)
             };
-
+            
             logWriter?.Write(reqResContext);
 
             return reqResContext;
         }
+
 
         private static string ReadStreamInChunks(Stream stream)
         {
@@ -49,7 +53,7 @@
             stream.Seek(0, SeekOrigin.Begin);
 
             using var textWriter = new StringWriter();
-            using var reader = new StreamReader(stream);
+            using var reader = new StreamReader(stream, Encoding.UTF8);
 
             var readChunk = new char[readChunkBufferLength];
             int readChunkLength;
