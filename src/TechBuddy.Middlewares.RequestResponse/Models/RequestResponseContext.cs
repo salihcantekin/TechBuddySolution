@@ -23,7 +23,7 @@ namespace TechBuddy.Middlewares.RequestResponse
         /// <summary>
         /// Gets total response duration. Format: mm:ss.fff
         /// </summary>
-        public string ResponseTimeStr => ResponseCreationTime is null ? "" : string.Format("{0:mm\\:ss\\.fff}", ResponseCreationTime);
+        public string ResponseTime => ResponseCreationTime is null ? "" : string.Format("{0:mm\\:ss\\.fff}", ResponseCreationTime);
 
 
         public int? RequestLength => RequestBody?.Length == 0 ? null : RequestBody.Length;
