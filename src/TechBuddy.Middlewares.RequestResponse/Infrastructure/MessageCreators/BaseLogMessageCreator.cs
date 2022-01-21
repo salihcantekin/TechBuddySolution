@@ -11,7 +11,7 @@
                 LogFields.QueryString => requestResponseContext.Context?.Request?.QueryString.Value,
                 LogFields.Path => requestResponseContext.Context?.Request?.Path.Value,
                 LogFields.HostName => requestResponseContext.Context?.Request?.Host.Value,
-                LogFields.ResponseTiming => requestResponseContext.ResponseTimeStr,
+                LogFields.ResponseTiming => requestResponseContext.ResponseTime,
                 LogFields.RequestLength => requestResponseContext.RequestLength.ToString(),
                 LogFields.ResponseLength => requestResponseContext.ResponseLength.ToString(),
                 _ => string.Empty

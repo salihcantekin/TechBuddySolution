@@ -35,7 +35,7 @@ app.AddTBRequestResponseMiddleware(opt =>
         var resLength = context.ResponseLength;
 
         var responseTimeSpan = context.ResponseCreationTime;
-        var responseFormattedTimeSpan = context.ResponseTimeStr;
+        var responseFormattedTimeSpan = context.ResponseTime;
         
         //Console.Write(System.Text.Json.JsonSerializer.Serialize(context));
     });
